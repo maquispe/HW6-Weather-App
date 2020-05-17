@@ -54,7 +54,7 @@ function postToHtml(response) {
   $(".wind").text("Wind Speed: " + response.wind.speed.toFixed(0) + " mph");
   $(".humidity").text("Humidity: " + response.main.humidity + "%");
   $(".temp").text("Temperature: " + tempF.toFixed(0) + "°F");
-}
+};
 
 // Transfer five day forecast content to HTML
 function fiveDayForecast(response) {
@@ -142,7 +142,7 @@ function showPreviousCities() {
 }
 function getTheWeather(city) {
   if (city != "") {
-    $("#error").html(""); d
+    $("#error").html("");
 
     $.ajax({
       url:
@@ -175,8 +175,7 @@ function getTheWeather(city) {
     }).then(function (response) {
       fiveDayForecast(response);
     });
-  }
-   else {
+  }else {
     $("#error").html("Field cannot be empty");
   }
 }
